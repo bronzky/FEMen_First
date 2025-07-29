@@ -41,6 +41,7 @@
     grid-template-rows: 1fr auto;
     gap: var(--spacing-xs);
     grid-template-areas: "image" "texts";
+    box-shadow: 0 10px 35px rgb(139, 139, 139);
 
 }
 
