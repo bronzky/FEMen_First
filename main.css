@@ -1,13 +1,28 @@
+:root {
+    --color-primary: hsl(218, 44%, 22%);
+    --color-secondary: hsl(216, 15%, 48%);
+    --color-background: hsl(212, 45%, 89%);
+    --color-card: #fff;
+    
+    --font-size-base: 0.9375rem;
+    --font-size-title: 1.5rem;
+    
+    --spacing-xs: 0.3125rem;
+    --spacing-sm: 1rem;
+    --spacing-radius: 1.5625rem;
+    --spacing-radius-sm: 0.9375rem;
+}
+
 * {
     padding: 0;
     margin: 0;
     display: block;
     font-family: Outfit, sans-serif;
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 .main-wrapper {
-    background-color: hsl(212, 45%, 89%);
+    background-color: var(--color-background);
     height: 100dvh;
     width: 100dvw;
     display: flex;
@@ -17,13 +32,14 @@
 }
 
 .card {
-    background-color: #fff;
-    width: 300px;
-    padding: 1rem;
-    border-radius: 25px;
+    background-color: var(--color-card);
+    width: clamp(15.625rem, 50vw, 18.75rem); 
+    font-size: clamp(0.875rem, 2.5vw, 0.9375rem);
+    padding: var(--spacing-sm);
+    border-radius: var(--spacing-radius);
     display: grid;
     grid-template-rows: 1fr auto;
-    gap: 5px;
+    gap: var(--spacing-xs);
     grid-template-areas: "image" "texts";
 
 }
@@ -43,22 +59,18 @@
     padding: 1rem;
 }
 .main-title {
-    color: hsl(218, 44%, 22%);
+    color: var(--color-primary);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
 }
 
 .main-text {
-    color: hsl(216, 15%, 48%);
+    color: var(--color-secondary);
     font-weight: 400;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 20rem) {
     .card {
-        width: 250px;
-    }
-
-    .main-title {
-        margin-bottom: 5px;
+        width: 15.625rem;
     }
 }
