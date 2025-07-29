@@ -61,7 +61,7 @@
 .main-title {
     color: var(--color-primary);
     font-weight: 700;
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    font-size: clamp(1.25rem, 4vw, 1.4rem);
 }
 
 .main-text {
